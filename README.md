@@ -1,2 +1,5 @@
-# common dotfiles
+# andywu's dotfiles
+
+## installation
+
 
