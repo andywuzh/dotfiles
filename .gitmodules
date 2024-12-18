@@ -1,3 +1,6 @@
 [submodule ".z.lua"]
 	path = .z.lua
 	url = git@github.com:skywind3000/z.lua
+[submodule ".pyenv"]
+	path = .pyenv
+	url = git@github.com:pyenv/pyenv.git
