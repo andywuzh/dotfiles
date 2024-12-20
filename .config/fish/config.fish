@@ -6,6 +6,8 @@ if status is-interactive
     . $HOME/.z.lua/init.fish
 
     # pyenv
+    set -Ux PYENV_ROOT $HOME/.pyenv
+    fish_add_path $PYENV_ROOT/bin
     source (pyenv init - | psub)
 
     # starship

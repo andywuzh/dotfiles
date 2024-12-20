@@ -5,7 +5,7 @@ cd "$(dirname "${BASH_SOURCE}")"
 git pull origin main
 
 git submodule init
-#git submodule update --recursive
+git submodule update --recursive
 
 for submod in .pyenv .z.lua; do
     rm -rf $HOME/$submod
