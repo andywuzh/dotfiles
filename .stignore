@@ -1,0 +1,11 @@
+.pyenv/shims/*
+.pyenv/version
+.pyenv/versions/*
+.pyenv/sources
+.pyenv/libexec/*.dylib
+.pyenv/src/Makefile
+.pyenv/src/*.o
+.pyenv/bats/
+.pyenv/default-packages
+.pyenv.idea
+.pyenv*.un~

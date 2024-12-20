@@ -12,4 +12,5 @@ for submod in .pyenv .z.lua; do
     ln -svf $PWD/$submod $HOME/$submod
 done
 
+ln -svf $PWD/.xprofile $HOME/.xrofile
 
