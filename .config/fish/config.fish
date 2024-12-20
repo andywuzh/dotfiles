@@ -30,6 +30,8 @@ if status is-interactive
     abbr --add gp 'git push'
     abbr --add gup 'git pull --rebase'
     abbr --add gsta 'git stash'
+    abbr --add gstal 'git stash list'
+    abbr --add gstap 'git stash pop'
 
     abbr --add vim nvim
     abbr --add vi nvim
