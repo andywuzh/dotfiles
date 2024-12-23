@@ -8,8 +8,10 @@ git submodule init
 git submodule update --recursive
 
 for submod in .pyenv .z.lua; do
-    rm -rf $HOME/$submod
-    ln -svf $PWD/$submod $HOME/$submod
+    # rm -rf $HOME/$submod
+    # ln -svf $PWD/$submod $HOME/$submod
+
+    test -d $HOME/$submod || ln -svf $PWD/$submod $HOME/$submod
 done
 
 ln -svf $PWD/.xprofile $HOME/.xrofile

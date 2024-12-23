@@ -8,7 +8,8 @@ if status is-interactive
     # pyenv
     set -Ux PYENV_ROOT $HOME/.pyenv
     fish_add_path $PYENV_ROOT/bin
-    source (pyenv init - | psub)
+    pyenv init - | source
+    status --is-interactive; and pyenv virtualenv-init - | source
 
     # starship
     source (starship init fish --print-full-init | psub)
