@@ -2,6 +2,9 @@ if status is-interactive
     # environment
     set -x PATH $HOME/local/bin $PATH
 
+    # functions
+    #source $HOME/.config/fish/functions/*.fish
+
     # zlua
     . $HOME/.z.lua/init.fish
 
@@ -39,9 +42,20 @@ if status is-interactive
     abbr --add vi nvim
 
     abbr --add hx helix
+
+    abbr --add s 'zellij attach --create andy'
+
     # alias
     alias vim='nvim'
     alias vi='nvim'
 
+    # auto start zellij session in WezTerm
+#    if string match -q -- 'WezTerm' $TERM_PROGRAM or string match -q -- 'alacritty' $TERM or string match -q -- 'kitty' $TERM
+#        if not string length -q -- $ZELLIJ $ZELLIJ_SESSION_NAME
+#            zellij attach --create andy
+#        end
+#    end
 
 end
+
+

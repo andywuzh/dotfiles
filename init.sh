@@ -18,6 +18,7 @@ ln -svf $PWD/.xprofile $HOME/.xrofile
 
 ln -svf $PWD/.config/fish $HOME/.config/fish
 ln -svf $PWD/.config/pip $HOME/.config/pip
+ln -svf $PWD/.config/zellij $HOME/.config/zellij
 ln -svf $PWD/.config/wezterm $HOME/.config/wezterm
 
 ln -svf $PWD/.global_gitconfig $HOME/.gitconfig
