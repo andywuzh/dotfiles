@@ -14,7 +14,7 @@ for submod in .pyenv .z.lua; do
     test -d $HOME/$submod || ln -svf $PWD/$submod $HOME/$submod
 done
 
-ln -svf $PWD/.xprofile $HOME/.xrofile
+ln -svf $PWD/.xprofile $HOME/.xprofile
 
 ln -svf $PWD/.config/fish $HOME/.config/fish
 ln -svf $PWD/.config/pip $HOME/.config/pip

@@ -3,3 +3,80 @@
 	name = andywu
 [init]
 	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	editor = nvim
+	excludesFile = ~/.gitignore
+	autocrlf = input
+
+[alias]
+        s = status
+        st = status
+        sb = status -s -b
+        #############
+        d = diff
+        di = diff
+        dc = diff --cached
+        dk = diff --check
+        dck = diff --cached --check
+        #############
+        c = commit
+        ca = commit -a
+        cm = commit -m
+        ci = commit
+        #############
+        l = log --oneline
+        lg = log --graph --decorate -30 --all --date-order --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%C(cyan)%h%Creset %C(bold)%ad%Creset%C(auto)%d %s'
+        lgt = log --oneline --graph --decorate --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%h - %an %ad %ar: %s'
+        lgg = log --pretty=format:"%h%x09%an%x09%ad%x09%s"
+        #############
+        o = checkout
+        co = checkout
+        ob = checkout -b
+        cob = checkout -b
+        #############
+        b = branch
+        bv = branch -vv
+        ba = branch -a
+        bd = branch -d
+        br = branch -r
+        #############
+        f = fetch
+        fo = fetch origin
+        #############
+        m = merge
+        #############
+        ps = push
+        pl = pull
+        pb = pull --rebase
+        psf = push -f
+        psu = push -u
+        plu = pull -u
+        pso = push origin
+        plo = pull origin
+        pbo = pull --rebase origin
+        psfo = push -f origin
+        psuo = push -u origin
+        pluo = pull -u origin
+        #############
+        rb = rebase
+        #############
+        re = reset
+        rh = reset HEAD
+        reh = reset --hard
+        rem = reset --mixed
+        res = reset --soft
+        rehh = reset --hard HEAD
+        remh = reset --mixed HEAD
+        resh = reset --soft HEAD
+        #############
+        w = show
+        #############
+        human = name-rev --name-only --refs=refs/heads/*
+        cam = commit -am
+[credential]
+	helper = store
